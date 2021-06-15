@@ -1,9 +1,9 @@
 import React from "react"
 
-const SliderButton = ({ moveSlide, Icon }) => {
+const SliderButton = ({ moveSlide, Icon, direction }) => {
   return (
     <div onClick={moveSlide}>
-      <Icon style={{ fontSize: 32 }} />
+      <Icon className={direction === "next" ? "arrow-right" : "arrow-left"} />
     </div>
   )
 }
